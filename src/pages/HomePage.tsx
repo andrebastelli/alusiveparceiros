@@ -4,7 +4,18 @@ import ambGourmet from '@/assets/amb-gourmet.jpg'
 import ambQuarto from '@/assets/amb-quarto.jpg'
 import ambFachada from '@/assets/amb-fachada.jpg'
 import { Reveal } from '@/components/Reveal'
-import { MessageCircle, Instagram, Check, Sparkles } from 'lucide-react'
+import {
+  MessageCircle,
+  Instagram,
+  Check,
+  Sparkles,
+  AlertTriangle,
+  Lightbulb,
+  BadgeDollarSign,
+  ListFilter,
+  House,
+  Handshake,
+} from 'lucide-react'
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '5500000000000'
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
@@ -12,12 +23,30 @@ const INSTAGRAM_URL =
   import.meta.env.VITE_INSTAGRAM_URL ?? 'https://instagram.com/alusive_iluminacao'
 
 const dores = [
-  { icon: '😰', text: 'Tenho medo de comprar e ficar desproporcional ou fora do estilo.' },
-  { icon: '🔦', text: 'Não sei qual temperatura de cor, potência ou altura usar.' },
-  { icon: '💸', text: 'Tenho receio de desperdiçar dinheiro comprando a peça errada.' },
-  { icon: '😵', text: 'São tantas opções que trava na hora de decidir.' },
-  { icon: '🏠', text: 'Quero uma casa bonita, mas a iluminação nunca entrega o efeito que imagino.' },
-  { icon: '🤝', text: 'As lojas só vendem — ninguém me orienta de verdade.' },
+  {
+    icon: AlertTriangle,
+    text: 'Tenho medo de comprar e ficar desproporcional ou fora do estilo.',
+  },
+  {
+    icon: Lightbulb,
+    text: 'Não sei qual temperatura de cor, potência ou altura usar.',
+  },
+  {
+    icon: BadgeDollarSign,
+    text: 'Tenho receio de desperdiçar dinheiro comprando a peça errada.',
+  },
+  {
+    icon: ListFilter,
+    text: 'São tantas opções que trava na hora de decidir.',
+  },
+  {
+    icon: House,
+    text: 'Quero uma casa bonita, mas a iluminação nunca entrega o efeito que imagino.',
+  },
+  {
+    icon: Handshake,
+    text: 'As lojas só vendem — ninguém me orienta de verdade.',
+  },
 ]
 
 const pilares = [
@@ -191,16 +220,23 @@ export default function HomePage() {
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {dores.map((d, i) => (
-              <Reveal key={d.text} delay={i * 80}>
-                <div className="h-full rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold">
-                  <div className="text-4xl">{d.icon}</div>
-                  <p className="mt-4 text-base leading-relaxed text-foreground/90">
-                    "{d.text}"
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+            {dores.map((d, i) => {
+  const Icon = d.icon
+
+  return (
+    <Reveal key={d.text} delay={i * 80}>
+      <div className="h-full rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 text-gold">
+          <Icon className="h-6 w-6" strokeWidth={1.8} />
+        </div>
+
+        <p className="mt-4 text-base leading-relaxed text-foreground/90">
+          "{d.text}"
+        </p>
+      </div>
+    </Reveal>
+  )
+})}
           </div>
           <Reveal>
             <p className="mt-16 text-center text-lg italic text-muted-foreground md:text-xl">
