@@ -138,12 +138,6 @@ const depoimentos = [
   },
 ]
 
-function Logo({ className = '' }: { className?: string }) {
-  return (
-    <span className={`font-extrabold tracking-[0.25em] text-gold ${className}`}>ALUSIVE</span>
-  )
-}
-
 function CTAButton({
   children,
   className = '',
