@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(0.95 0.012 85);
+  --card: oklch(0.19 0.005 80);
+  --card-foreground: oklch(0.95 0.012 85);
+  --primary: oklch(0.76 0.07 85);
+  --primary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.22 0.01 80);
+  --muted-foreground: oklch(0.72 0.02 85);
+  --accent: oklch(0.38 0.08 80);
+  --border: oklch(0.3 0.02 80 / 50%);
+  --input: oklch(0.3 0.02 80);
+  --ring: oklch(0.76 0.07 85);
+
+  --gold: oklch(0.76 0.07 85);
+  --gold-dark: oklch(0.38 0.08 80);
+  --gradient-gold: linear-gradient(135deg, oklch(0.76 0.07 85), oklch(0.55 0.09 82));
+  --gradient-hero: linear-gradient(180deg, oklch(0.15 0 0 / 0.55), oklch(0.15 0 0 / 0.95));
+  --shadow-gold: 0 10px 40px -10px oklch(0.55 0.09 82 / 0.45);
+  --shadow-soft: 0 20px 60px -20px oklch(0 0 0 / 0.6);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gold { color: var(--gold); }
+  .bg-gold { background-color: var(--gold); }
+  .bg-gradient-gold { background-image: var(--gradient-gold); }
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .bg-background { background-color: var(--background); }
+  .bg-card { background-color: var(--card); }
+  .text-foreground { color: var(--foreground); }
+  .text-muted-foreground { color: var(--muted-foreground); }
+  .border-border { border-color: var(--border); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .btn-gold {
+    background-image: var(--gradient-gold);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow-gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 14px 50px -10px oklch(0.76 0.07 85 / 0.55);
+  }
+}
