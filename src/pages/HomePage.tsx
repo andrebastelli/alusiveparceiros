@@ -3,8 +3,26 @@ import ambPedireito from '@/assets/amb-pedireito.jpg'
 import ambGourmet from '@/assets/amb-gourmet.jpg'
 import ambQuarto from '@/assets/amb-quarto.jpg'
 import ambFachada from '@/assets/amb-fachada.jpg'
+import logoAlusive from '@/assets/logo-alusive.png'
 import { Reveal } from '@/components/Reveal'
-import { MessageCircle, Instagram, Check, Sparkles } from 'lucide-react'
+import {
+  MessageCircle,
+  Instagram,
+  Check,
+  Sparkles,
+  AlertTriangle,
+  Lightbulb,
+  BadgeDollarSign,
+  ListFilter,
+  House,
+  Handshake,
+  Utensils,
+  Landmark,
+  CookingPot,
+  BedDouble,
+  Home,
+  Sofa,
+} from 'lucide-react'
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '5500000000000'
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
@@ -12,12 +30,30 @@ const INSTAGRAM_URL =
   import.meta.env.VITE_INSTAGRAM_URL ?? 'https://instagram.com/alusive_iluminacao'
 
 const dores = [
-  { icon: '😰', text: 'Tenho medo de comprar e ficar desproporcional ou fora do estilo.' },
-  { icon: '🔦', text: 'Não sei qual temperatura de cor, potência ou altura usar.' },
-  { icon: '💸', text: 'Tenho receio de desperdiçar dinheiro comprando a peça errada.' },
-  { icon: '😵', text: 'São tantas opções que trava na hora de decidir.' },
-  { icon: '🏠', text: 'Quero uma casa bonita, mas a iluminação nunca entrega o efeito que imagino.' },
-  { icon: '🤝', text: 'As lojas só vendem — ninguém me orienta de verdade.' },
+  {
+    icon: AlertTriangle,
+    text: 'Tenho medo de comprar e ficar desproporcional ou fora do estilo.',
+  },
+  {
+    icon: Lightbulb,
+    text: 'Não sei qual temperatura de cor, potência ou altura usar.',
+  },
+  {
+    icon: BadgeDollarSign,
+    text: 'Tenho receio de desperdiçar dinheiro comprando a peça errada.',
+  },
+  {
+    icon: ListFilter,
+    text: 'São tantas opções que trava na hora de decidir.',
+  },
+  {
+    icon: House,
+    text: 'Quero uma casa bonita, mas a iluminação nunca entrega o efeito que imagino.',
+  },
+  {
+    icon: Handshake,
+    text: 'As lojas só vendem — ninguém me orienta de verdade.',
+  },
 ]
 
 const pilares = [
@@ -36,12 +72,42 @@ const pilares = [
 ]
 
 const ambientes = [
-  { emoji: '🍽️', nome: 'Sala de Jantar', desc: 'Pendentes que criam o clima perfeito', img: heroImg },
-  { emoji: '🏛️', nome: 'Pé-direito Duplo', desc: 'Lustres que impressionam', img: ambPedireito },
-  { emoji: '🍖', nome: 'Área Gourmet', desc: 'Luz que aquece e aconchega', img: ambGourmet },
-  { emoji: '🛏️', nome: 'Quarto', desc: 'Conforto e relaxamento', img: ambQuarto },
-  { emoji: '🏡', nome: 'Fachada', desc: 'Valorização e charme do imóvel', img: ambFachada },
-  { emoji: '🛋️', nome: 'Sala de Estar', desc: 'Elegância no detalhe', img: ambPedireito },
+  {
+    icon: Utensils,
+    nome: 'Sala de Jantar',
+    desc: 'Pendentes que criam o clima perfeito',
+    img: heroImg,
+  },
+  {
+    icon: Landmark,
+    nome: 'Pé-direito Duplo',
+    desc: 'Lustres que impressionam',
+    img: ambPedireito,
+  },
+  {
+    icon: CookingPot,
+    nome: 'Área Gourmet',
+    desc: 'Luz que aquece e aconchega',
+    img: ambGourmet,
+  },
+  {
+    icon: BedDouble,
+    nome: 'Quarto',
+    desc: 'Conforto e relaxamento',
+    img: ambQuarto,
+  },
+  {
+    icon: Home,
+    nome: 'Fachada',
+    desc: 'Valorização e charme do imóvel',
+    img: ambFachada,
+  },
+  {
+    icon: Sofa,
+    nome: 'Sala de Estar',
+    desc: 'Elegância no detalhe',
+    img: ambPedireito,
+  },
 ]
 
 const beneficios = [
@@ -72,12 +138,6 @@ const depoimentos = [
   },
 ]
 
-function Logo({ className = '' }: { className?: string }) {
-  return (
-    <span className={`font-extrabold tracking-[0.25em] text-gold ${className}`}>ALUSIVE</span>
-  )
-}
-
 function CTAButton({
   children,
   className = '',
@@ -103,7 +163,21 @@ export default function HomePage() {
       {/* Header */}
       <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-background/40 border-b border-border">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Logo className="text-lg md:text-xl" />
+          <a href="#top" aria-label="Alusive" className="inline-flex items-center">
+  <span
+    className="block h-8 w-36 bg-[#c6ae7e] md:h-9 md:w-40"
+    style={{
+      WebkitMaskImage: `url(${logoAlusive})`,
+      maskImage: `url(${logoAlusive})`,
+      WebkitMaskRepeat: 'no-repeat',
+      maskRepeat: 'no-repeat',
+      WebkitMaskPosition: 'center',
+      maskPosition: 'center',
+      WebkitMaskSize: 'contain',
+      maskSize: 'contain',
+    }}
+  />
+</a>
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -191,16 +265,23 @@ export default function HomePage() {
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {dores.map((d, i) => (
-              <Reveal key={d.text} delay={i * 80}>
-                <div className="h-full rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold">
-                  <div className="text-4xl">{d.icon}</div>
-                  <p className="mt-4 text-base leading-relaxed text-foreground/90">
-                    "{d.text}"
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+            {dores.map((d, i) => {
+  const Icon = d.icon
+
+  return (
+    <Reveal key={d.text} delay={i * 80}>
+      <div className="h-full rounded-2xl border border-border bg-card p-8 transition-colors hover:border-gold">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 text-gold">
+          <Icon className="h-6 w-6" strokeWidth={1.8} />
+        </div>
+
+        <p className="mt-4 text-base leading-relaxed text-foreground/90">
+          "{d.text}"
+        </p>
+      </div>
+    </Reveal>
+  )
+})}
           </div>
           <Reveal>
             <p className="mt-16 text-center text-lg italic text-muted-foreground md:text-xl">
@@ -261,26 +342,35 @@ export default function HomePage() {
             </div>
           </Reveal>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {ambientes.map((a, i) => (
-              <Reveal key={a.nome} delay={i * 80}>
-                <div className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
-                  <img
-                    src={a.img}
-                    alt={a.nome}
-                    loading="lazy"
-                    width={800}
-                    height={1000}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-3xl">{a.emoji}</div>
-                    <h3 className="mt-2 text-xl text-gold">{a.nome}</h3>
-                    <p className="text-sm text-muted-foreground">{a.desc}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+            {ambientes.map((a, i) => {
+  const Icon = a.icon
+
+  return (
+    <Reveal key={a.nome} delay={i * 80}>
+      <div className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
+        <img
+          src={a.img}
+          alt={a.nome}
+          loading="lazy"
+          width={800}
+          height={1000}
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-gold/30 bg-background/70 text-gold backdrop-blur-sm">
+            <Icon className="h-5 w-5" strokeWidth={1.8} />
+          </div>
+
+          <h3 className="mt-3 text-xl text-gold">{a.nome}</h3>
+          <p className="text-sm text-muted-foreground">{a.desc}</p>
+        </div>
+      </div>
+    </Reveal>
+  )
+})}
           </div>
           <Reveal>
             <div className="mt-16 text-center">
@@ -385,8 +475,22 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-border bg-card/40 py-12">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
-          <Logo className="text-xl" />
-          <p className="text-sm italic text-muted-foreground">Alusive — Iluminando Sonhos</p>
+          <a href="#top" aria-label="Alusive" className="inline-flex items-center">
+  <span
+    className="block h-8 w-36 bg-[#c6ae7e] md:h-9 md:w-40"
+    style={{
+      WebkitMaskImage: `url(${logoAlusive})`,
+      maskImage: `url(${logoAlusive})`,
+      WebkitMaskRepeat: 'no-repeat',
+      maskRepeat: 'no-repeat',
+      WebkitMaskPosition: 'center',
+      maskPosition: 'center',
+      WebkitMaskSize: 'contain',
+      maskSize: 'contain',
+    }}
+  />
+</a>
+          <p className="text-sm italic text-muted-foreground">Iluminando Sonhos</p>
           <div className="flex gap-4">
             <a
               href={INSTAGRAM_URL}
@@ -408,7 +512,15 @@ export default function HomePage() {
             </a>
           </div>
           <p className="text-xs text-muted-foreground">
-            © 2025 Alusive Iluminação. Todos os direitos reservados.
+            © 2025 Alusive Iluminação. Todos os direitos reservados. Desenvolvido por{" "}
+<a
+  href="https://bastelliconsultoria.com.br/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-current/80 transition hover:text-current hover:underline underline-offset-4"
+>
+  Bastelli Consultoria
+</a>
           </p>
         </div>
       </footer>
