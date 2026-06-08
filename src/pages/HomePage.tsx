@@ -24,7 +24,7 @@ import {
   Sofa,
 } from 'lucide-react'
 
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '5500000000000'
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '5519992476174'
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 const INSTAGRAM_URL =
   import.meta.env.VITE_INSTAGRAM_URL ?? 'https://instagram.com/alusive_iluminacao'
@@ -163,21 +163,19 @@ export default function HomePage() {
       {/* Header */}
       <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-background/40 border-b border-border">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" aria-label="Alusive" className="inline-flex items-center">
-  <span
-    className="block h-8 w-36 bg-[#c6ae7e] md:h-9 md:w-40"
-    style={{
-      WebkitMaskImage: `url(${logoAlusive})`,
-      maskImage: `url(${logoAlusive})`,
-      WebkitMaskRepeat: 'no-repeat',
-      maskRepeat: 'no-repeat',
-      WebkitMaskPosition: 'center',
-      maskPosition: 'center',
-      WebkitMaskSize: 'contain',
-      maskSize: 'contain',
-    }}
-  />
-</a>
+          <span
+  className="block mx-auto md:mx-0 h-12 md:h-20 aspect-[3/1] bg-[#c6ae7e]"
+  style={{
+    WebkitMaskImage: `url(${logoAlusive})`,
+    maskImage: `url(${logoAlusive})`,
+    WebkitMaskRepeat: 'no-repeat',
+    maskRepeat: 'no-repeat',
+    WebkitMaskPosition: 'center',
+    maskPosition: 'center',
+    WebkitMaskSize: 'contain',
+    maskSize: 'contain',
+  }}
+/>
           <a
             href={WHATSAPP_URL}
             target="_blank"
