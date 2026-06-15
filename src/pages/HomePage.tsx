@@ -114,27 +114,27 @@ const beneficios = [
   'Especialistas em iluminação decorativa e funcional',
   'Projetos que unem estética e funcionalidade',
   'Atendimento consultivo — não apenas vendemos, orientamos',
-  'Soluções para cada etapa da sua obra ou reforma',
-  'Produtos do básico ao alto padrão',
-  'Mão de obra especializada para instalação',
-  'Ajudamos a escolher tamanho, altura, temperatura de cor e potência ideal',
+  'Comissão ou desconto exclusivo para arquitetos e designers cadastrados',
+  'Laudos técnicos e fichas de especificação para memorial descritivo',
+  'Visita técnica ao projeto junto com o cliente, quando necessário',
+  'Showroom à disposição para você levar clientes',
 ]
 
 const depoimentos = [
   {
-    text: 'Tinha muito medo de errar na escolha dos pendentes da sala. O atendimento da Alusive foi incrível — me orientaram em tudo e o resultado ficou exatamente o que eu sonhava.',
-    autor: 'Ana Clara M.',
-    info: 'cliente desde 2023',
+    text: 'A Alusive virou minha parceira de especificação. Eles entendem de IRC, temperatura de cor e me dão suporte técnico que nenhum outro fornecedor da região oferece. Meus projetos ficaram em outro nível.',
+    autor: 'Arq. Mariana Costa',
+    info: 'parceira desde 2022',
   },
   {
-    text: 'Comprei a iluminação da minha cozinha gourmet aqui. Além das peças lindas, eles me ajudaram com a distribuição e ficou perfeito. Recomendo muito!',
-    autor: 'Roberto F.',
-    info: 'reformou em 2024',
+    text: 'Finalmente um fornecedor que entra na reunião comigo e defende o projeto junto ao cliente. O desconto de parceiro ainda protege minha margem. Indico para todos os colegas do escritório.',
+    autor: 'Designer Rafael Mendes',
+    info: 'parceiro desde 2023',
   },
   {
-    text: 'Finalmente encontrei uma loja que entende de iluminação de verdade. Me senti seguro em cada decisão. O ambiente ficou sofisticado e aconchegante.',
-    autor: 'Fernanda S.',
-    info: 'construção nova',
+    text: 'Precisava de fichas técnicas completas para o memorial descritivo e a Alusive entregou tudo. Agilizou meu processo de especificação e o cliente aprovou na primeira apresentação.',
+    autor: 'Arq. Juliana Torres',
+    info: 'parceira desde 2024',
   },
 ]
 
