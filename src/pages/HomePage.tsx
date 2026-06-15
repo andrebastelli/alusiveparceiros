@@ -32,42 +32,42 @@ const INSTAGRAM_URL =
 const dores = [
   {
     icon: AlertTriangle,
-    text: 'Tenho medo de comprar e ficar desproporcional ou fora do estilo.',
+    text: 'Perco tempo especificando produtos que o cliente não encontra ou que atrasam a obra.',
   },
   {
     icon: Lightbulb,
-    text: 'Não sei qual temperatura de cor, potência ou altura usar.',
+    text: 'Preciso de um fornecedor que fale técnico — temperatura de cor, IRC, fluxo luminoso.',
   },
   {
     icon: BadgeDollarSign,
-    text: 'Tenho receio de desperdiçar dinheiro comprando a peça errada.',
+    text: 'Não tenho desconto de parceiro e o cliente compra direto perdendo minha margem.',
   },
   {
     icon: ListFilter,
-    text: 'São tantas opções que trava na hora de decidir.',
+    text: 'Fico sem suporte pós-venda quando o cliente liga com problema.',
   },
   {
     icon: House,
-    text: 'Quero uma casa bonita, mas a iluminação nunca entrega o efeito que imagino.',
+    text: 'Difícil encontrar curadoria premium com entrega rápida na região.',
   },
   {
     icon: Handshake,
-    text: 'As lojas só vendem — ninguém me orienta de verdade.',
+    text: 'Quero um fornecedor que entre em reunião comigo para defender o projeto.',
   },
 ]
 
 const pilares = [
   {
-    title: 'Projeto Personalizado',
-    desc: 'Analisamos o seu ambiente e indicamos as peças certas para cada ponto, estilo e necessidade.',
+    title: 'Especificação Técnica com você',
+    desc: 'participamos da reunião de projeto.',
   },
   {
-    title: 'Atendimento Consultivo',
-    desc: 'Um especialista ao seu lado desde a escolha até a instalação, respondendo cada dúvida com clareza.',
+    title: 'Tabela de parceiro com desconto progressivo',
+    desc: 'sua margem protegida.',
   },
   {
-    title: 'Resultado Garantido',
-    desc: 'Do básico ao sofisticado, entregamos iluminação que transforma e valoriza seu imóvel.',
+    title: 'Suporte do projeto à entrega',
+    desc: 'acompanhamento até a instalação.',
   },
 ]
 
@@ -114,27 +114,27 @@ const beneficios = [
   'Especialistas em iluminação decorativa e funcional',
   'Projetos que unem estética e funcionalidade',
   'Atendimento consultivo — não apenas vendemos, orientamos',
-  'Soluções para cada etapa da sua obra ou reforma',
-  'Produtos do básico ao alto padrão',
-  'Mão de obra especializada para instalação',
-  'Ajudamos a escolher tamanho, altura, temperatura de cor e potência ideal',
+  'Comissão ou desconto exclusivo para arquitetos e designers cadastrados',
+  'Laudos técnicos e fichas de especificação para memorial descritivo',
+  'Visita técnica ao projeto junto com o cliente, quando necessário',
+  'Showroom à disposição para você levar clientes',
 ]
 
 const depoimentos = [
   {
-    text: 'Tinha muito medo de errar na escolha dos pendentes da sala. O atendimento da Alusive foi incrível — me orientaram em tudo e o resultado ficou exatamente o que eu sonhava.',
-    autor: 'Ana Clara M.',
-    info: 'cliente desde 2023',
+    text: 'A Alusive virou minha parceira de especificação. Eles entendem de IRC, temperatura de cor e me dão suporte técnico que nenhum outro fornecedor da região oferece. Meus projetos ficaram em outro nível.',
+    autor: 'Arq. Mariana Costa',
+    info: 'parceira desde 2022',
   },
   {
-    text: 'Comprei a iluminação da minha cozinha gourmet aqui. Além das peças lindas, eles me ajudaram com a distribuição e ficou perfeito. Recomendo muito!',
-    autor: 'Roberto F.',
-    info: 'reformou em 2024',
+    text: 'Finalmente um fornecedor que entra na reunião comigo e defende o projeto junto ao cliente. O desconto de parceiro ainda protege minha margem. Indico para todos os colegas do escritório.',
+    autor: 'Designer Rafael Mendes',
+    info: 'parceiro desde 2023',
   },
   {
-    text: 'Finalmente encontrei uma loja que entende de iluminação de verdade. Me senti seguro em cada decisão. O ambiente ficou sofisticado e aconchegante.',
-    autor: 'Fernanda S.',
-    info: 'construção nova',
+    text: 'Precisava de fichas técnicas completas para o memorial descritivo e a Alusive entregou tudo. Agilizou meu processo de especificação e o cliente aprovou na primeira apresentação.',
+    autor: 'Arq. Juliana Torres',
+    info: 'parceira desde 2024',
   },
 ]
 
@@ -204,7 +204,7 @@ export default function HomePage() {
               className="inline-block rounded-full px-4 py-1 text-xs uppercase tracking-[0.3em] text-gold"
               style={{ border: '1px solid oklch(0.76 0.07 85 / 40%)' }}
             >
-              Iluminação de alto padrão
+              Parceiro técnico para arquitetos e designers
             </span>
           </Reveal>
           <Reveal delay={150}>
@@ -215,15 +215,14 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={300}>
             <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Projetos personalizados de iluminação para quem está construindo ou reformando com
-              sofisticação.
+              A parceria de iluminação que vai elevar cada projeto que você entrega — com curadoria técnica e estética, do briefing à instalação
             </p>
           </Reveal>
           <Reveal delay={450}>
             <div className="mt-10 flex flex-col items-center gap-4">
               <CTAButton>
                 <MessageCircle className="h-5 w-5" />
-                Falar com um especialista no WhatsApp
+                Quero ser parceiro Alusive
               </CTAButton>
               <p className="flex items-center gap-2 text-xs text-muted-foreground md:text-sm">
                 <Sparkles className="h-4 w-4 text-gold" />
@@ -238,10 +237,10 @@ export default function HomePage() {
       <section className="border-y border-border bg-card/40">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-10 text-center md:grid-cols-4">
           {[
-            { n: '+500', l: 'Projetos realizados' },
+            { n: '+500', l: 'Ambientes especificados' },
             { n: '+8', l: 'Anos de experiência' },
-            { n: '100%', l: 'Atendimento personalizado' },
-            { n: '★★★★★', l: 'Clientes em toda a região' },
+            { n: '100%', l: 'Exclusiva para parceiros' },
+            { n: '+80', l: 'Profissionais parceiros' },
           ].map((s) => (
             <div key={s.l}>
               <div className="text-2xl font-extrabold text-gold md:text-3xl">{s.n}</div>
