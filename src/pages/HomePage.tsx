@@ -32,42 +32,42 @@ const INSTAGRAM_URL =
 const dores = [
   {
     icon: AlertTriangle,
-    text: 'Tenho medo de comprar e ficar desproporcional ou fora do estilo.',
+    text: 'Perco tempo especificando produtos que o cliente não encontra ou que atrasam a obra.',
   },
   {
     icon: Lightbulb,
-    text: 'Não sei qual temperatura de cor, potência ou altura usar.',
+    text: 'Preciso de um fornecedor que fale técnico — temperatura de cor, IRC, fluxo luminoso.',
   },
   {
     icon: BadgeDollarSign,
-    text: 'Tenho receio de desperdiçar dinheiro comprando a peça errada.',
+    text: 'Não tenho desconto de parceiro e o cliente compra direto perdendo minha margem.',
   },
   {
     icon: ListFilter,
-    text: 'São tantas opções que trava na hora de decidir.',
+    text: 'Fico sem suporte pós-venda quando o cliente liga com problema.',
   },
   {
     icon: House,
-    text: 'Quero uma casa bonita, mas a iluminação nunca entrega o efeito que imagino.',
+    text: 'Difícil encontrar curadoria premium com entrega rápida na região.',
   },
   {
     icon: Handshake,
-    text: 'As lojas só vendem — ninguém me orienta de verdade.',
+    text: 'Quero um fornecedor que entre em reunião comigo para defender o projeto.',
   },
 ]
 
 const pilares = [
   {
-    title: 'Projeto Personalizado',
-    desc: 'Analisamos o seu ambiente e indicamos as peças certas para cada ponto, estilo e necessidade.',
+    title: 'Especificação Técnica com você',
+    desc: 'participamos da reunião de projeto.',
   },
   {
-    title: 'Atendimento Consultivo',
-    desc: 'Um especialista ao seu lado desde a escolha até a instalação, respondendo cada dúvida com clareza.',
+    title: 'Tabela de parceiro com desconto progressivo',
+    desc: 'sua margem protegida.',
   },
   {
-    title: 'Resultado Garantido',
-    desc: 'Do básico ao sofisticado, entregamos iluminação que transforma e valoriza seu imóvel.',
+    title: 'Suporte do projeto à entrega',
+    desc: 'acompanhamento até a instalação.',
   },
 ]
 
@@ -204,7 +204,7 @@ export default function HomePage() {
               className="inline-block rounded-full px-4 py-1 text-xs uppercase tracking-[0.3em] text-gold"
               style={{ border: '1px solid oklch(0.76 0.07 85 / 40%)' }}
             >
-              Iluminação de alto padrão
+              Parceiro técnico para arquitetos e designers
             </span>
           </Reveal>
           <Reveal delay={150}>
@@ -215,15 +215,14 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={300}>
             <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Projetos personalizados de iluminação para quem está construindo ou reformando com
-              sofisticação.
+              A parceria de iluminação que vai elevar cada projeto que você entrega — com curadoria técnica e estética, do briefing à instalação
             </p>
           </Reveal>
           <Reveal delay={450}>
             <div className="mt-10 flex flex-col items-center gap-4">
               <CTAButton>
                 <MessageCircle className="h-5 w-5" />
-                Falar com um especialista no WhatsApp
+                Quero ser parceiro Alusive
               </CTAButton>
               <p className="flex items-center gap-2 text-xs text-muted-foreground md:text-sm">
                 <Sparkles className="h-4 w-4 text-gold" />
@@ -238,10 +237,10 @@ export default function HomePage() {
       <section className="border-y border-border bg-card/40">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-10 text-center md:grid-cols-4">
           {[
-            { n: '+500', l: 'Projetos realizados' },
+            { n: '+500', l: 'Ambientes especificados' },
             { n: '+8', l: 'Anos de experiência' },
-            { n: '100%', l: 'Atendimento personalizado' },
-            { n: '★★★★★', l: 'Clientes em toda a região' },
+            { n: '100%', l: 'Exclusiva para parceiros' },
+            { n: '+80', l: 'Profissionais parceiros' },
           ].map((s) => (
             <div key={s.l}>
               <div className="text-2xl font-extrabold text-gold md:text-3xl">{s.n}</div>
