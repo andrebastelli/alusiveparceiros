@@ -532,7 +532,6 @@ export default function HomePage() {
         aria-label="Falar no WhatsApp"
       >
         <MessageCircle className="h-5 w-5" />
-        <span className="hidden sm:inline">Falar agora</span>
       </a>
     </div>
   )
